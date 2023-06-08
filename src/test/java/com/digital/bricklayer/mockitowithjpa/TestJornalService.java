@@ -66,7 +66,7 @@ public class TestJornalService {
 
 
         argumentCaptor.getValue().stream().forEach(jornalPersistido ->{
-            Assertions.assertEquals(3,jornalPersistido.getDataPublicacao().getDayOfMonth() );
+            Assertions.assertEquals(LocalDateTime.now().getDayOfMonth(),jornalPersistido.getDataPublicacao().getDayOfMonth() );
         });
 
         Assertions.assertEquals(1,argumentCaptor.getValue().size());
